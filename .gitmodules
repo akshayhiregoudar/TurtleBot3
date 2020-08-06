@@ -1,0 +1,3 @@
+[submodule "dynamic_obstacles_in_gazebo"]
+	path = dynamic_obstacles_in_gazebo
+	url = https://github.com/akshayhiregoudar/dynamic_obstacles_in_gazebo
