@@ -52,7 +52,7 @@ vfh.UseLidarScan = true;
 vfh.DistanceLimits = [0.05 1];
 
 % Set radius of the robot
-vfh.RobotRadius = 0.3;
+vfh.RobotRadius = 0.25;
 
 % Set minimum turning radius of the robot
 vfh.MinTurningRadius = 0.5;
