@@ -1,4 +1,4 @@
-# Control and Navigation of TurtleBot3 ground robots using MATLAB's ROS and Navigation Toolbox.
+# Control and Navigation of TurtleBot3 ground robots using MATLAB's ROS and Navigation Toolbox
 
 This repository contains MATLAB and C++ codes along with Gazebo files needed to simulate the motion of a robot in an environment with static and dynamic obstacles.
 
@@ -41,7 +41,7 @@ The ground robot used in this project is the [TurtleBot3](https://emanual.roboti
 * Find the current orientation (yaw) and calculate the difference in angle between the current position and the goal position.
 * Robot will first rotate with a given angular velocity and then travel with a given linear velocity.
 
-A simulation of the robot travelling from (0,0) to (0,5) can be found here: [Navigation](simulations/Navigation_1.mp4) and the MATLAB code used for this can be found here: [SimpleNavigation.m](src/SimpleNavigation.m)
+A simulation of the robot travelling from (0,0) to (0,5) can be found here: [Position_(0,5)](simulations/Position_(0,5).mp4) and the MATLAB code used for this can be found here: [SimpleNavigation.m](src/SimpleNavigation.m)
 
 ## LiDAR Scanner
 
@@ -64,11 +64,33 @@ The TurtleBot3 comes with a 360 Laser Distance Sensor LDS-01 and some of its fea
 
 <img src="images/TB3_Environment.jpg" width="550"/> <img src="images/BOM_Environment.jpg" width="380"/>
 
+## Autonomous Navigation
+
+* Subscribe to velocity and laser scan data.
+
+* Create a ROS transformation tree and get the transformation between the */odom* frame and */base_footprint* frame.
+
+* Vector Field Histogram algorithm computes obstacle-free steering directions based on the range sensor readings.
+
+* The user can define certain parameters depending on the type of the robot and the environment. 
+
+  * Robot radius
+
+  * Safety distance
+
+  * Minimum turning radius
+
+  * Distance limits
+  
+* Code: [AutonomousNavigation.m](src/AutonomousNavigation.m)
+* Simulation: [Navigation](simulations/Navigation_1.mp4)
+
 ## Map Resolution
 
 * *mapResolution* is a parameter which is defined when building a map from the LiDAR scan data.
 * It is the resolution of the occupancy grid map, specified as a positive integer in cells per meter.
 * A greater resolution will lead to greater computation time and vice versa.
+* Code: [BuildMap](src/BuildMap.m)
 
 <img src="images/MapResolution20.jpg" width="875"/>
 
@@ -87,6 +109,17 @@ The TurtleBot3 comes with a 360 Laser Distance Sensor LDS-01 and some of its fea
 <img src="images/A_star_Path.jpg" width="550"/>
 
 MATLAB codes used to obtain the optimal paths: [RRT](src/RRT.m) and [A*](src/Astar.m).
+
+## Multiple Robot Navigation
+
+* Multiple robots can be imported within an environment at desired position and orientation.
+
+* Useful in mapping the entire environment within a short period of time.
+
+* Code: [MulitRobotNavigation](src/MulitRobotNavigation.m)
+
+* Simulation: [MulitRobotNavigation_House](simulations/MulitRobot_Navigation_House.mp4) and [MulitRobotNavigation_Cafe](src/5RobotNavigation.mp4)
+
 
 ## Map Merge
 
