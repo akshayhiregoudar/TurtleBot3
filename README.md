@@ -72,5 +72,19 @@ The TurtleBot3 comes with a 360 Laser Distance Sensor LDS-01 and some of its fea
 
 <img src="images/MapResolution30.jpg" width="875"/>
 
+## Path Planning Algorithms (RRT and A*)
 
+* A binary occupancy map has to given as an input along with the start and goal points.
+
+* The function finds the optimal path based on the number of minimum and maximum iterations set by the user.
+
+* In both the cases the start point is (35.0, 35.0) and the goal point is (98.0, 98.0).
+
+<img src="images/RRT_path.jpg" width="550"/>
+
+<img src="images/A_star_Path.jpg" width="550"/>
+
+## Map Merge
+
+<img src="images/House_5Robot.jpg" width="400"/> <img src="images/HouseMapMerged.jpeg" width="455"/>
 
