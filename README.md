@@ -41,6 +41,8 @@ The ground robot used in this project is the [TurtleBot3](https://emanual.roboti
 * Find the current orientation (yaw) and calculate the difference in angle between the current position and the goal position.
 * Robot will first rotate with a given angular velocity and then travel with a given linear velocity.
 
+A simulation of the robot travelling from (0,0) to (0,5) can be found here: [Navigation](simulations/Navigation_1.mp4) and the MATLAB code used for this can be found here: [SimpleNavigation.m](src/SimpleNavigation.m)
+
 ## LiDAR Scanner
 
 The TurtleBot3 comes with a 360 Laser Distance Sensor LDS-01 and some of its features are as follows:
@@ -83,6 +85,8 @@ The TurtleBot3 comes with a 360 Laser Distance Sensor LDS-01 and some of its fea
 <img src="images/RRT_path.jpg" width="550"/>
 
 <img src="images/A_star_Path.jpg" width="550"/>
+
+MATLAB codes used to obtain the optimal paths: [RRT](src/RRT.m) and [A*](src/Astar.m).
 
 ## Map Merge
 
