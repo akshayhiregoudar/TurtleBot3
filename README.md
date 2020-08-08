@@ -1,6 +1,6 @@
 # Control and Navigation of TurtleBot3 ground robots using MATLAB's ROS and Navigation Toolbox.
 
-This repository contains MATLAB and C++ codes along with Gazebo files needed to simulate the motion of a robot in a environment.
+This repository contains MATLAB and C++ codes along with Gazebo files needed to simulate the motion of a robot in an environment with static and dynamic obstacles.
 
 ## TurtleBot3
 
@@ -60,4 +60,17 @@ The TurtleBot3 comes with a 360 Laser Distance Sensor LDS-01 and some of its fea
 * The integration of sensor data and position estimates create a spatial representation of the approximate locations of the obstacles.
 
 
-<img src="images/TB3_Environment.jpg" width="550"/> <img src="images/BOM_Environment.jpg" width="380"/> 
+<img src="images/TB3_Environment.jpg" width="550"/> <img src="images/BOM_Environment.jpg" width="380"/>
+
+## Map Resolution
+
+* *mapResolution* is a parameter which is defined when building a map from the LiDAR scan data.
+* It is the resolution of the occupancy grid map, specified as a positive integer in cells per meter.
+* A greater resolution will lead to greater computation time and vice versa.
+
+<img src="images/MapResolution20.jpg" width="875"/>
+
+<img src="images/MapResolution30.jpg" width="875"/>
+
+
+
