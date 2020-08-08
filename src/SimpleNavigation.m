@@ -14,8 +14,8 @@ speed = rosmessage(velPub);
 
 % set goal point
 goal = pose.Position;
-goal.X = 0.5;
-goal.Y = 0.0;
+goal.X = 0.0;
+goal.Y = 5.0;
 
 %frequency of the loop (rate of execution)
 r = rateControl(6);
