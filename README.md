@@ -104,11 +104,11 @@ The TurtleBot3 comes with a 360 Laser Distance Sensor LDS-01 and some of its fea
 
 * In both the cases the start point is (35.0, 35.0) and the goal point is (98.0, 98.0).
 
+* MATLAB codes used to obtain the optimal paths: [RRT](src/RRT.m) and [A*](src/Astar.m).
+
 <img src="images/RRT_path.jpg" width="550"/>
 
 <img src="images/A_star_Path.jpg" width="550"/>
-
-MATLAB codes used to obtain the optimal paths: [RRT](src/RRT.m) and [A*](src/Astar.m).
 
 ## Multiple Robot Navigation
 
